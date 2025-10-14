@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Pemesanan Barang</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #ccc; }
+        .field-group { display: flex; align-items: center; margin-bottom: 10px; }
+        .field-group label { width: 150px; margin-right: 10px; text-align: right; }
+        .field-group input[type="text"], .field-group select { flex-grow: 1; padding: 5px; }
+        /* Style untuk area gambar */
+        .upload-area { 
+            /* Menghapus border dan mengatur ulang tampilan untuk gambar */
+            border: none; 
+            width: 100px; 
+            height: 100px; 
+            text-align: center; 
+            line-height: normal; 
+            margin-right: 20px; 
+            /* Menambahkan flex untuk penempatan vertikal center */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .upload-area img {
+            width: 100%; /* Membuat gambar mengisi area */
+            height: 100%; /* Membuat gambar mengisi area */
+            object-fit: cover; /* Memastikan gambar terlihat bagus tanpa distorsi */
+        }
+        .section { margin-bottom: 20px; padding: 10px; border: 1px solid #eee; }
+        .button-group { text-align: center; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h3 style="text-align: center;">Form Pemesanan Barang</h3>
+    
+    <form action="hasil_pemesanan.html" method="get"> 
+
+        <div style="display: flex; margin-bottom: 20px;">
+            <div class="upload-area">
+                <img src="https://via.placeholder.com/100x100?text=Macbook" alt="Foto Macbook Air">
+            </div>
+            <div style="flex-grow: 1;">
+                <div class="field-group">
+                    <label for="title">Title Here</label>
+                    <input type="text" id="title" name="title" value="Macbook Air E800">
+                </div>
+                <div class="field-group">
+                    <label for="description">Description</label>
+                    <input type="text" id="description" name="description" value="Year: 2009">
+                </div>
+                <div class="field-group">
+                    <label for="model">Model</label>
+                    <input type="text" id="model" name="model" value="Generation: Mint">
+                </div>
+                <div class="field-group">
+                    <label for="condition">Condition</label>
+                    <input type="text" id="condition" name="condition" value="Mint">
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h4>Detail Transaksi</h4>
+            <div class="field-group">
+                <label for="account_number">Account Number</label>
+                <input type="text" id="account_number" name="account_number" value="123-456-789-0">
+            </div>
+            <div class="field-group">
+                <label for="bank">Bank</label>
+                <select id="bank" name="bank">
+                    <option value="hsbc">HSBC</option>
+                    <option value="bca">BCA</option>
+                    <option value="mandiri">Mandiri</option>
+                </select>
+            </div>
+            <div class="field-group">
+                <label for="account_holder">Account Holder</label>
+                <input type="text" id="account_holder" name="account_holder" value="Name Here">
+            </div>
+            <div class="field-group">
+                <label for="transaction">Transaction</label>
+                <select id="transaction" name="transaction">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3" selected>3</option>
+                </select>
+                <small style="margin-left: 10px;">The transaction is for 3 person, choose 3 from the drop-down list</small>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h4>Pengiriman Informasi</h4>
+            <div class="field-group">
+                <label></label>
+                <input type="checkbox" id="send_mobile" name="send_mobile" checked>
+                <label for="send_mobile" style="width: auto; text-align: left;">Send to Mobile Phone</label>
+            </div>
+            <div class="field-group">
+                <label></label>
+                <input type="checkbox" id="send_email" name="send_email" checked>
+                <label for="send_email" style="width: auto; text-align: left;">Send to Email</label>
+            </div>
+            <div class="field-group">
+                <label for="mobile_phone">Send to Mobile Phone</label>
+                <input type="text" id="mobile_phone" name="mobile_phone" value="1234567890 (01234567891)">
+            </div>
+            <div class="field-group">
+                <label for="email">Send to Email</label>
+                <input type="email" id="email" name="email" value="dummy.email@yahoo.com">
+            </div>
+        </div>
+
+        <div class="button-group">
+            <input type="sumbit"><a href="html2.html">pesan</a></input>
+        </div>
+
+    </form>
+</div>
+
+</body>
+</html>
