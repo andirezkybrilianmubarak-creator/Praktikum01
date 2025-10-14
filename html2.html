@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hasil Form Pemesanan Barang</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #ccc; }
+        .field-group { display: flex; align-items: center; margin-bottom: 10px; }
+        .field-group label { width: 150px; margin-right: 10px; text-align: right; font-weight: bold; }
+        .field-group input[type="text"], .field-group select { flex-grow: 1; padding: 5px; border: 1px solid #ccc; background-color: #f9f9f9; }
+        .upload-area { border: 1px solid #ccc; width: 100px; height: 100px; text-align: center; line-height: 100px; margin-right: 20px; }
+        .section { margin-bottom: 20px; padding: 10px; border: 1px solid #eee; }
+        .data-display input[type="text"], .data-display select {
+            /* Membuat input/select terlihat seperti teks biasa yang tidak bisa diedit */
+            border: none;
+            background-color: transparent;
+            font-weight: normal;
+        }
+        .data-display small { margin-left: 10px; }
+        .button-group { text-align: center; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h3 style="text-align: center;">Hasil Form Pemesanan Barang</h3>
+    
+    <form class="data-display"> 
+
+        <div style="display: flex; margin-bottom: 20px;">
+            <div class="upload-area"></div>
+            <div style="flex-grow: 1;">
+                <div class="field-group">
+                    <label>Title</label>
+                    <input type="text" value="Macbook Air E800" readonly>
+                </div>
+                <div class="field-group">
+                    <label>Description</label>
+                    <input type="text" value="Year: 2009" readonly>
+                </div>
+                <div class="field-group">
+                    <label>Model</label>
+                    <input type="text" value="Generation: Mint" readonly>
+                </div>
+                <div class="field-group">
+                    <label>Condition</label>
+                    <input type="text" value="Mint" readonly>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h4>Detail Pembayaran</h4>
+            <div class="field-group">
+                <label>Total Amount</label>
+                <input type="text" value="E800" readonly>
+            </div>
+            <div class="field-group">
+                <label>Pay to</label>
+                <input type="text" value="123-456-789-0" readonly>
+            </div>
+            <div class="field-group">
+                <label>Payment Type</label>
+                <select disabled>
+                    <option>View Detail</option>
+                </select>
+            </div>
+            <div class="field-group">
+                <label>Account Holder</label>
+                <input type="text" value="Name Here" readonly>
+            </div>
+            <div class="field-group">
+                <label>Account No</label>
+                <input type="text" value="123-456-789-0" readonly>
+            </div>
+            <div class="field-group">
+                <label></label>
+                <small>Send to Mobile Phone</small>
+            </div>
+            <div class="field-group">
+                <label></label>
+                <small>Send me copy of transaction</small>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h4>Informasi Kontak</h4>
+            <div class="field-group">
+                <label>Send to Mobile Phone</label>
+                <input type="text" value="1234567890 (01234567891)" readonly>
+            </div>
+            <div class="field-group">
+                <label>Send to Email</label>
+                <input type="email" value="dummy.email@yahoo.com" readonly>
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button style="padding: 10px 20px; background-color: green; color: white; border: none; cursor: pointer;">Review QueLink</button>
+        </div>
+
+    </form>
+</div>
+
+</body>
+</html>
